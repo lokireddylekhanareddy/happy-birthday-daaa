@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For DAAA ❤️</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:white;
+    background:#050509;
+    overflow-x:hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:-30%;
+    z-index:-5;
+
+    background:
+    radial-gradient(
+        circle at 15% 20%,
+        rgba(125,50,255,.5),
+        transparent 25%
+    ),
+    radial-gradient(
+        circle at 85% 15%,
+        rgba(30,100,255,.45),
+        transparent 25%
+    ),
+    radial-gradient(
+        circle at 80% 80%,
+        rgba(255,30,170,.35),
+        transparent 28%
+    ),
+    radial-gradient(
+        circle at 15% 85%,
+        rgba(100,30,220,.4),
+        transparent 28%
+    ),
+    #050509;
+
+    filter:blur(50px);
+
+    animation:bgMove 15s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove{
+
+    0%{
+        transform:translate(-3%,-2%) scale(1);
+    }
+
+    100%{
+        transform:translate(3%,3%) scale(1.1);
+    }
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.star{
+    position:fixed;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:white;
+    opacity:.5;
+    z-index:-1;
+
+    animation:float 8s infinite ease-in-out;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+        opacity:.2;
+    }
+
+    50%{
+        transform:translateY(-50px);
+        opacity:.8;
+    }
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+section{
+    min-height:100vh;
+    padding:90px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+.container{
+    width:100%;
+    max-width:1050px;
+}
+
+.eyebrow{
+    font-size:11px;
+    letter-spacing:5px;
+    color:rgba(255,255,255,.45);
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:clamp(45px,7vw,90px);
+    line-height:1.05;
+    font-weight:500;
+}
+
+h2{
+    font-size:clamp(38px,5vw,70px);
+    line-height:1.1;
+    font-weight:500;
+}
+
+.gradient{
+    background:
+    linear-gradient(
+        90deg,
+        #b86cff,
+        #5990ff,
+        #ff5ac8,
+        #b86cff
+    );
+
+    background-size:250%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:gradient 5s linear infinite;
+}
+
+@keyframes gradient{
+
+    to{
+        background-position:250%;
+    }
+}
+
+.sub{
+    margin:30px auto 0;
+    max-width:700px;
+
+    color:rgba(255,255,255,.62);
+
+    line-height:1.8;
+    font-size:17px;
+}
+
+button{
+    border:1px solid rgba(255,255,255,.25);
+
+    background:rgba(255,255,255,.06);
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    backdrop-filter:blur(15px);
+}
+
+button:hover{
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.12);
+
+    box-shadow:
+    0 15px 40px
+    rgba(130,70,255,.3);
+}
+
+.primary{
+    margin-top:40px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero h1{
+    max-width:900px;
+    margin:auto;
+}
+
+.hero .sub{
+    font-size:18px;
+}
+
+.scroll{
+    margin-top:70px;
+    font-size:11px;
+    letter-spacing:4px;
+    color:rgba(255,255,255,.35);
+}
+
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass{
+    border:1px solid rgba(255,255,255,.12);
+
+    background:
+    rgba(255,255,255,.045);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    transition:.4s;
+}
+
+.glass:hover{
+    border-color:rgba(180,110,255,.45);
+    transform:translateY(-7px);
+}
+
+
+/* =========================
+   SONG
+========================= */
+
+.song-card{
+    max-width:600px;
+    margin:50px auto 0;
+
+    padding:40px;
+}
+
+.music-circle{
+    width:110px;
+    height:110px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:45px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(150,80,255,.4),
+        rgba(255,60,180,.3)
+    );
+
+    animation:music 2s infinite alternate;
+}
+
+@keyframes music{
+
+    from{
+        box-shadow:0 0 20px rgba(160,80,255,.2);
+    }
+
+    to{
+        box-shadow:0 0 60px rgba(220,80,255,.55);
+    }
+}
+
+.song-title{
+    margin-top:25px;
+    font-size:25px;
+}
+
+.song-note{
+    margin-top:10px;
+    color:rgba(255,255,255,.5);
+}
+
+audio{
+    width:100%;
+    margin-top:25px;
+}
+
+
+/* =========================
+   SECRET NOTES
+========================= */
+
+.notes{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+    margin-top:50px;
+}
+
+.note{
+    min-height:190px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.note-number{
+    font-size:11px;
+    letter-spacing:4px;
+    color:rgba(255,255,255,.3);
+}
+
+.note-message{
+    display:none;
+
+    font-size:17px;
+    line-height:1.6;
+    color:white;
+}
+
+.note.open .note-number{
+    display:none;
+}
+
+.note.open .note-message{
+    display:block;
+}
+
+
+/* =========================
+   MYSTERY BOX
+========================= */
+
+.mystery{
+    margin-top:50px;
+}
+
+.box{
+    width:150px;
+    height:120px;
+
+    margin:40px auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:70px;
+
+    cursor:pointer;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #5121a8,
+        #a91c78
+    );
+
+    box-shadow:
+    0 20px 60px
+    rgba(130,50,255,.3);
+
+    transition:.5s;
+}
+
+.box:hover{
+    transform:
+    rotate(-4deg)
+    scale(1.08);
+}
+
+.mystery-result{
+    min-height:35px;
+
+    color:rgba(255,255,255,.75);
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   STARTER PACK
+========================= */
+
+.starter{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:18px;
+
+    margin-top:50px;
+}
+
+.trait{
+    padding:30px 20px;
+}
+
+.trait-icon{
+    font-size:40px;
+}
+
+.trait h3{
+    margin-top:18px;
+    font-size:20px;
+}
+
+.trait p{
+    margin-top:10px;
+    color:rgba(255,255,255,.5);
+    line-height:1.6;
+}
+
+
+/* =========================
+   WHEN I'M SAD
+========================= */
+
+.sad-card{
+    max-width:750px;
+    margin:50px auto 0;
+
+    padding:45px;
+}
+
+.sad-card p{
+    font-size:20px;
+    line-height:1.9;
+    color:rgba(255,255,255,.7);
+}
+
+.sad-card strong{
+    display:block;
+    margin-top:25px;
+
+    font-size:24px;
+
+    color:white;
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-area{
+    margin-top:60px;
+}
+
+.cake{
+    position:relative;
+
+    width:230px;
+    height:150px;
+
+    margin:80px auto 30px;
+
+    border-radius:15px 15px 25px 25px;
+
+    background:
+    linear-gradient(
+        #ff82bb 0 25%,
+        #c8499b 25% 100%
+    );
+
+    box-shadow:
+    0 25px 60px
+    rgba(255,70,180,.25);
+}
+
+.cake::before{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:35px;
+
+    left:-10px;
+    top:-15px;
+
+    border-radius:50%;
+
+    background:#ffacd2;
+}
+
+.candle{
+    position:absolute;
+
+    width:15px;
+    height:55px;
+
+    background:#fff;
+
+    top:-65px;
+
+    border-radius:5px;
+}
+
+.candle:nth-child(1){
+    left:55px;
+}
+
+.candle:nth-child(2){
+    left:108px;
+}
+
+.candle:nth-child(3){
+    left:161px;
+}
+
+.flame{
+    position:absolute;
+
+    width:18px;
+    height:25px;
+
+    background:#ffd65a;
+
+    border-radius:
+    50% 50% 50% 50%;
+
+    top:-27px;
+
+    left:-2px;
+
+    box-shadow:
+    0 0 20px
+    #ffae00;
+
+    animation:flame 0.7s infinite alternate;
+}
+
+@keyframes flame{
+
+    to{
+        transform:scale(.7);
+    }
+}
+
+.blown .flame{
+    display:none;
+}
+
+.cake-message{
+    min-height:30px;
+    color:rgba(255,255,255,.7);
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz{
+    max-width:700px;
+    margin:50px auto 0;
+}
+
+.question{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.answers{
+    display:grid;
+    gap:12px;
+}
+
+.answer{
+    width:100%;
+    border-radius:15px;
+}
+
+.quiz-result{
+    margin-top:25px;
+    min-height:30px;
+}
+
+
+/* =========================
+   OPEN WHEN
+========================= */
+
+.open-cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:50px;
+}
+
+.open-card{
+    min-height:210px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+
+    cursor:pointer;
+}
+
+.open-card .front{
+    font-size:20px;
+}
+
+.open-card .inside{
+    display:none;
+
+    color:rgba(255,255,255,.7);
+
+    line-height:1.7;
+
+    margin-top:20px;
+}
+
+.open-card.active .front{
+    display:none;
+}
+
+.open-card.active .inside{
+    display:block;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    max-width:800px;
+
+    margin:60px auto 0;
+
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+    bottom:0;
+
+    width:1px;
+
+    background:
+    rgba(255,255,255,.15);
+}
+
+.time-item{
+    width:50%;
+
+    padding:20px;
+
+    text-align:right;
+
+    position:relative;
+}
+
+.time-item:nth-child(even){
+    margin-left:50%;
+    text-align:left;
+}
+
+.time-dot{
+    position:absolute;
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    background:#a86cff;
+
+    box-shadow:
+    0 0 20px #a86cff;
+
+    right:-6px;
+
+    top:35px;
+}
+
+.time-item:nth-child(even) .time-dot{
+    left:-6px;
+}
+
+.time-date{
+    font-size:10px;
+    letter-spacing:3px;
+    color:#a86cff;
+}
+
+.time-item h3{
+    margin-top:10px;
+    font-size:21px;
+}
+
+.time-item p{
+    margin-top:8px;
+    color:rgba(255,255,255,.5);
+    line-height:1.6;
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-box{
+    max-width:550px;
+
+    margin:50px auto 0;
+
+    padding:40px;
+}
+
+.password-input{
+    width:100%;
+
+    padding:16px 20px;
+
+    margin-top:20px;
+
+    border-radius:50px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.15);
+
+    background:
+    rgba(255,255,255,.06);
+
+    color:white;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:16px;
+}
+
+.password-result{
+    min-height:35px;
+
+    margin-top:20px;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+    min-height:100vh;
+}
+
+.final h2{
+    font-size:clamp(50px,8vw,100px);
+}
+
+.final-message{
+    margin-top:30px;
+
+    font-size:19px;
+
+    color:rgba(255,255,255,.6);
+}
+
+.heart{
+    font-size:60px;
+
+    margin-top:30px;
+
+    animation:heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat{
+
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:750px){
+
+    section{
+        padding:70px 18px;
+    }
+
+    .notes,
+    .starter,
+    .open-cards{
+        grid-template-columns:1fr;
+    }
+
+    .timeline::before{
+        left:10px;
+    }
+
+    .time-item,
+    .time-item:nth-child(even){
+        width:100%;
+
+        margin-left:0;
+
+        padding-left:40px;
+
+        text-align:left;
+    }
+
+    .time-dot,
+    .time-item:nth-child(even) .time-dot{
+        left:4px;
+        right:auto;
+    }
+
+    .sad-card{
+        padding:30px 22px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- STARS -->
+
+<div class="star" style="left:8%;top:20%"></div>
+<div class="star" style="left:20%;top:70%"></div>
+<div class="star" style="left:35%;top:15%"></div>
+<div class="star" style="left:55%;top:80%"></div>
+<div class="star" style="left:70%;top:25%"></div>
+<div class="star" style="left:85%;top:65%"></div>
+<div class="star" style="left:92%;top:15%"></div>
+
+
+<!-- =================================================
+     HERO
+================================================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<p class="eyebrow">
+A LITTLE SOMETHING FOR YOU...
+</p>
+
+<h1>
+It's funny how
+<span class="gradient">
+2 months
+</span>
+can feel like so much more.
+</h1>
+
+<p class="sub">
+DAAAA... this whole little website is for you.
+</p>
+
+<button class="primary"
+onclick="document.getElementById('song').scrollIntoView()">
+
+OPEN YOUR SURPRISE →
+
+</button>
+
+<p class="scroll">
+SCROLL DOWN ↓
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     1. SONG
+================================================= -->
+
+<section id="song">
+
+<div class="container">
+
+<p class="eyebrow">
+01 · A SONG FOR YOU
+</p>
+
+<h2>
+Because sometimes
+<span class="gradient">music says it better.</span>
+</h2>
+
+<div class="glass song-card">
+
+<div class="music-circle">
+🎧
+</div>
+
+<h3 class="song-title">
+Your Birthday Song
+</h3>
+
+<p class="song-note">
+Press play and listen while you go through this.
+</p>
+
+<audio controls>
+
+<source src="song.mp3" type="audio/mpeg">
+
+Your browser doesn't support audio.
+
+</audio>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     2. SECRET NOTES
+================================================= -->
+
+<section>
+
+<div class="container">
+
+<p class="eyebrow">
+02 · THINGS I NEVER SAY
+</p>
+
+<h2>
+Some things are
+<span class="gradient">easier to write.</span>
+</h2>
+
+<p class="sub">
+Click each card. Don't cheat and open everything at once. 😂
+</p>
+
+
+<div class="notes">
+
+
+<div class="glass note"
+onclick="openNote(this)">
+
+<div class="note-number">
+NOTE 01
+</div>
+
+<div class="note-message">
+You genuinely make my bad days feel a little lighter. 🫂
+</div>
+
+</div>
+
+
+<div class="glass note"
+onclick="openNote(this)">
+
+<div class="note-number">
+NOTE 02
+</div>
+
+<div class="note-message">
+I don't say it often, but I really appreciate how caring you are.
+</div>
+
+</div>
+
+
+<div class="glass note"
+onclick="openNote(this)">
+
+<div class="note-number">
+NOTE 03
+</div>
+
+<div class="note-message">
+Two months isn't that long... but somehow you became important.
+</div>
+
+</div>
+
+
+<div class="glass note"
+onclick="openNote(this)">
+
+<div class="note-number">
+NOTE 04
+</div>
+
+<div class="note-message">
+You're seriously one of the funniest people I've met. 😂
+</div>
+
+</div>
+
+
+<div class="glass note"
+onclick="openNote(this)">
+
+<div class="note-number">
+NOTE 05
+</div>
+
+<div class="note-message">
+Thank you for being there when I actually need someone.
+</div>
+
+</div>
+
+
+<div class="glass note"
+onclick="openNote(this)">
+
+<div class="note-number">
+NOTE 06
+</div>
+
+<div class="note-message">
+I'm really glad our paths crossed, DAAA. ❤️
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     3. MYSTERY BOX
+================================================= -->
+
+<section>
+
+<div class="container">
+
+<p class="eyebrow">
+03 · MYSTERY BOX
+</p>
+
+<h2>
+You found
+<span class="gradient">the box.</span>
+</h2>
+
+<p class="sub">
+You obviously have to open it. 😭
+</p>
+
+<div class="mystery">
+
+<div class="box"
+onclick="openMystery()">
+
+🎁
+
+</div>
+
+<p class="mystery-result" id="mysteryResult">
+Click the box...
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     4. STARTER PACK
+================================================= -->
+
+<section>
+
+<div class="container">
+
+<p class="eyebrow">
+04 · DAAA STARTER PACK
+</p>
+
+<h2>
+What makes you...
+<span class="gradient">YOU.</span>
+</h2>
+
+
+<div class="starter">
+
+
+<div class="glass trait">
+
+<div class="trait-icon">
+😂
+</div>
+
+<h3>
+Professional Funny Guy
+</h3>
+
+<p>
+Makes random situations ten times more chaotic.
+</p>
+
+</div>
+
+
+<div class="glass trait">
+
+<div class="trait-icon">
+🫂
+</div>
+
+<h3>
+Actually Caring
+</h3>
+
+<p>
+Pretends not to care but actually notices everything.
+</p>
+
+</div>
+
+
+<div class="glass trait">
+
+<div class="trait-icon">
+📱
+</div>
+
+<h3>
+Always Around
+</h3>
+
+<p>
+Somehow appears exactly when someone needs him.
+</p>
+
+</div>
+
+
+<div class="glass trait">
+
+<div class="trait-icon">
+⭐
+</div>
+
+<h3>
+Rare Edition
+</h3>
+
+<p>
+Limited availability. One DAAA only.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     5. WHEN I'M SAD
+================================================= -->
+
+<section>
+
+<div class="container">
+
+<p class="eyebrow">
+05 · WHEN I'M SAD...
+</p>
+
+<h2>
+You somehow know
+<span class="gradient">how to stay.</span>
+</h2>
+
+<div class="glass sad-card">
+
+<p>
+There are days when I don't really know what to say.
+</p>
+
+<p>
+But somehow, you being around makes things feel
+a little less heavy.
+</p>
+
+<strong>
+And honestly... that means a lot to me.
+</strong>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     6. BIRTHDAY CAKE
+================================================= -->
+
+<section>
+
+<div class="container">
+
+<p class="eyebrow">
+06 · BIRTHDAY TIME
+</p>
+
+<h2>
+Okay DAAA...
+<span class="gradient">make a wish.</span>
+</h2>
+
+
+<div class="cake-area">
+
+<div class="cake" id="cake">
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+</div>
+
+
+<button onclick="blowCandles()">
+🎂 BLOW THE CANDLES
+</button>
+
+<p class="cake-message"
+id="cakeMessage">
+Your wish is safe with me. 🤫
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     7. QUIZ
+================================================= -->
+
+<section>
+
+<div class="container">
+
+<p class="eyebrow">
+07 · FRIENDSHIP QUIZ
+</p>
+
+<h2>
+Let's see if you
+<span class="gradient">remember.</span>
+</h2>
+
+
+<div class="glass quiz">
+
+<div class="question" id="question">
+What nickname do I call you?
+</div>
+
+<div class="answers">
+
+<button class="answer"
+onclick="answer(0)">
+DAAA
+</button>
+
+<button class="answer"
+onclick="answer(1)">
+BRO
+</button>
+
+<button class="answer"
+onclick="answer(2)">
+SIR
+</button>
+
+<button class="answer"
+onclick="answer(3)">
+BOSS
+</button>
+
+</div>
+
+<p class="quiz-result"
+id="quizResult"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     8. OPEN WHEN
+================================================= -->
+
+<section>
+
+<div class="container">
+
+<p class="eyebrow">
+08 · OPEN WHEN...
+</p>
+
+<h2>
+Little messages
+<span class="gradient">for different days.</span>
+</h2>
+
+
+<div class="open-cards">
+
+
+<div class="glass open-card"
+onclick="toggleOpen(this)">
+
+<div class="front">
+💙<br><br>
+Open when you're sad
+</div>
+
+<div class="inside">
+Hey DAAA... remember that bad days
+don't last forever. Take a breath,
+drink some water and remember
+someone is always rooting for you.
+</div>
+
+</div>
+
+
+<div class="glass open-card"
+onclick="toggleOpen(this)">
+
+<div class="front">
+🌙<br><br>
+Open when you need a laugh
+</div>
+
+<div class="inside">
+Congratulations. You opened the card.
+Unfortunately, I don't have a joke good
+enough for you. 😂
+So... just remember your own jokes.
+</div>
+
+</div>
+
+
+<div class="glass open-card"
+onclick="toggleOpen(this)">
+
+<div class="front">
+✨<br><br>
+Open when you forget your worth
+</div>
+
+<div class="inside">
+You're more appreciated than you probably
+realize. Don't let one bad day convince
+you otherwise.
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     9. TIMELINE
+================================================= -->
+
+<section>
+
+<div class="container">
+
+<p class="eyebrow">
+09 · OUR LITTLE TIMELINE
+</p>
+
+<h2>
+Only two months...
+<span class="gradient">but look at this.</span>
+</h2>
+
+
+<div class="timeline">
+
+
+<div class="time-item">
+
+<div class="time-dot"></div>
+
+<div class="time-date">
+DAY 01
+</div>
+
+<h3>
+We started talking.
+</h3>
+
+<p>
+Two strangers slowly becoming friends.
+</p>
+
+</div>
+
+
+<div class="time-item">
+
+<div class="time-dot"></div>
+
+<div class="time-date">
+THE RANDOM DAYS
+</div>
+
+<h3>
+Random conversations.
+</h3>
+
+<p>
+Laughing, talking and somehow
+getting comfortable around each other.
+</p>
+
+</div>
+
+
+<div class="time-item">
+
+<div class="time-dot"></div>
+
+<div class="time-date">
+ONE MONTH
+</div>
+
+<h3>
+Okay... you're important now.
+</h3>
+
+<p>
+Somewhere along the way,
+you became someone I genuinely care about.
+</p>
+
+</div>
+
+
+<div class="time-item">
+
+<div class="time-dot"></div>
+
+<div class="time-date">
+TODAY
+</div>
+
+<h3>
+Your birthday.
+</h3>
+
+<p>
+And apparently I'm making you
+an entire website. 😂
+</p>
+
+</div>
+
+
+<div class="time-item">
+
+<div class="time-dot"></div>
+
+<div class="time-date">
+THE FUTURE
+</div>
+
+<h3>
+More memories loading...
+</h3>
+
+<p>
+This timeline isn't finished yet.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     10. PASSWORD
+================================================= -->
+
+<section>
+
+<div class="container">
+
+<p class="eyebrow">
+10 · ONE LAST LOCK
+</p>
+
+<h2>
+You found the
+<span class="gradient">secret.</span>
+</h2>
+
+<p class="sub">
+There is one final message.
+But you have to know the password.
+</p>
+
+
+<div class="glass password-box">
+
+<p>
+Hint: what do I call you? 👀
+</p>
+
+<input
+class="password-input"
+id="password"
+placeholder="Enter password..."
+autocomplete="off"
+>
+
+<br>
+
+<button
+class="primary"
+onclick="unlock()">
+
+UNLOCK →
+
+</button>
+
+<p
+class="password-result"
+id="passwordResult">
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     FINAL
+================================================= -->
+
+<section class="final"
+id="final">
+
+<div class="container">
+
+<p class="eyebrow">
+THE FINAL MESSAGE
+</p>
+
+<h2>
+HAPPY BIRTHDAY
+<br>
+<span class="gradient">
+DAAAA ❤️
+</span>
+</h2>
+
+<p class="final-message">
+
+Here's to more random conversations,
+more laughs, more annoying moments,
+more memories...
+
+<br><br>
+
+and a lot more DAAA. 😂
+
+<br><br>
+
+<strong>
+I'm really glad I met you.
+</strong>
+
+</p>
+
+<div class="heart">
+♡
+</div>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+/* =========================
+   SECRET NOTES
+========================= */
+
+function openNote(card){
+
+    card.classList.toggle("open");
+
+}
+
+
+/* =========================
+   MYSTERY BOX
+========================= */
+
+const mysteryMessages=[
+
+"Plot twist: you are actually one of my favourite people. 😂",
+
+"Your prize is... absolutely nothing. JK. Happy Birthday! 🎁",
+
+"Congratulations! You unlocked a virtual hug. 🫂",
+
+"Today's mission: have an amazing birthday.",
+
+"Reminder: you're officially older today. Sorry. 😭",
+
+"One DAAA = unlimited chaos + unlimited laughs."
+
+];
+
+let mysteryIndex=0;
+
+function openMystery(){
+
+    document.getElementById("mysteryResult").textContent=
+    mysteryMessages[mysteryIndex];
+
+    mysteryIndex++;
+
+    if(mysteryIndex>=mysteryMessages.length){
+        mysteryIndex=0;
+    }
+
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+function blowCandles(){
+
+    const cake=
+    document.getElementById("cake");
+
+    const message=
+    document.getElementById("cakeMessage");
+
+    cake.classList.add("blown");
+
+    message.textContent=
+    "🎉 Wish sent! Happy Birthday, DAAA! ❤️";
+
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+function answer(choice){
+
+    const result=
+    document.getElementById("quizResult");
+
+    if(choice===0){
+
+        result.textContent=
+        "CORRECT 😂 Obviously DAAA.";
+
+    }else{
+
+        result.textContent=
+        "Wronggg 😭 You should know this one!";
+
+    }
+
+}
+
+
+/* =========================
+   OPEN WHEN
+========================= */
+
+function toggleOpen(card){
+
+    card.classList.toggle("active");
+
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+function unlock(){
+
+    const input=
+    document.getElementById("password");
+
+    const result=
+    document.getElementById("passwordResult");
+
+    const password=
+    input.value.trim().toLowerCase();
+
+
+    if(password==="daaa"){
+
+        result.innerHTML=
+        "🔓 UNLOCKED! Scroll down... ❤️";
+
+        setTimeout(()=>{
+
+            document
+            .getElementById("final")
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+        },1000);
+
+    }else{
+
+        result.textContent=
+        "Nopeee 😂 Hint: the name I always call you.";
+
+    }
+
+}
+
+
+/* =========================
+   ENTER KEY PASSWORD
+========================= */
+
+document
+.getElementById("password")
+.addEventListener("keydown",function(e){
+
+    if(e.key==="Enter"){
+        unlock();
+    }
+
+});
+
+</script>
+
+</body>
+</html>

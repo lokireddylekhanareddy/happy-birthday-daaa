@@ -1,0 +1,1026 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: #050509;
+}
+
+
+/* ================= BACKGROUND ================= */
+
+.background {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -10;
+
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(125, 40, 255, 0.55),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(20, 100, 255, 0.45),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(255, 35, 170, 0.40),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(90, 20, 200, 0.40),
+            transparent 30%
+        ),
+        #050509;
+
+    filter: blur(45px);
+
+    animation:
+        backgroundMove
+        16s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+@keyframes backgroundMove {
+
+    0% {
+        transform: translate(-3%, -2%) scale(1);
+    }
+
+    50% {
+        transform: translate(4%, 3%) scale(1.08);
+    }
+
+    100% {
+        transform: translate(-2%, -2%) scale(1);
+    }
+}
+
+
+/* ================= FLOATING LIGHTS ================= */
+
+.lights {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.lights span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.45;
+
+    box-shadow:
+        0 0 12px white;
+
+    animation:
+        floatLight
+        linear
+        infinite;
+}
+
+.lights span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+    animation-duration: 9s;
+}
+
+.lights span:nth-child(2) {
+    left: 25%;
+    top: 70%;
+    animation-duration: 12s;
+}
+
+.lights span:nth-child(3) {
+    left: 40%;
+    top: 15%;
+    animation-duration: 10s;
+}
+
+.lights span:nth-child(4) {
+    left: 55%;
+    top: 80%;
+    animation-duration: 14s;
+}
+
+.lights span:nth-child(5) {
+    left: 70%;
+    top: 30%;
+    animation-duration: 11s;
+}
+
+.lights span:nth-child(6) {
+    left: 85%;
+    top: 65%;
+    animation-duration: 13s;
+}
+
+.lights span:nth-child(7) {
+    left: 92%;
+    top: 15%;
+    animation-duration: 8s;
+}
+
+.lights span:nth-child(8) {
+    left: 15%;
+    top: 90%;
+    animation-duration: 15s;
+}
+
+@keyframes floatLight {
+
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+}
+
+
+/* ================= COMMON ================= */
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 25px;
+}
+
+
+/* ================= OPENING ================= */
+
+.content {
+    max-width: 950px;
+
+    animation:
+        contentAppear
+        1.5s
+        ease
+        forwards;
+}
+
+@keyframes contentAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tiny-text {
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 28px;
+}
+
+h1 {
+    max-width: 900px;
+
+    font-size:
+        clamp(40px, 5.5vw, 72px);
+
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+h1 span,
+h2 span {
+    display: inline-block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b56cff,
+            #4d8dff,
+            #ff5abf,
+            #b56cff
+        );
+
+    background-size: 250%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        gradientMove
+        5s
+        linear
+        infinite;
+}
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 250%;
+    }
+}
+
+.sub-text {
+    margin-top: 30px;
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+}
+
+
+/* ================= BUTTONS ================= */
+
+button {
+    font-family: inherit;
+    color: white;
+    cursor: pointer;
+}
+
+.main-button,
+.next-btn {
+
+    border:
+        1px solid
+        rgba(255,255,255,0.25);
+
+    background:
+        rgba(255,255,255,0.07);
+
+    backdrop-filter:
+        blur(15px);
+
+    border-radius: 50px;
+
+    transition: 0.35s ease;
+}
+
+.main-button {
+
+    margin-top: 45px;
+
+    padding: 16px 28px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+.next-btn {
+
+    margin-top: 45px;
+
+    padding: 14px 25px;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+button span {
+    margin-left: 8px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+
+    transform: translateY(-5px);
+
+    background:
+        rgba(255,255,255,0.13);
+
+    border-color:
+        rgba(255,255,255,0.5);
+
+    box-shadow:
+        0 10px 35px
+        rgba(130,70,255,0.3);
+}
+
+button:hover span {
+    transform: translateX(6px);
+}
+
+
+/* ================= CHAPTER 01 ================= */
+
+.chapter,
+.chapter-two,
+.chapter-three,
+.chapter-four,
+.final-screen {
+
+    display: none;
+    opacity: 0;
+}
+
+.chapter-content {
+    max-width: 900px;
+}
+
+.chapter-number {
+
+    font-size: 12px;
+
+    letter-spacing: 6px;
+
+    color:
+        rgba(255,255,255,0.45);
+
+    margin-bottom: 30px;
+}
+
+h2 {
+
+    font-size:
+        clamp(38px, 5vw, 70px);
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+}
+
+h2 span {
+    display: block;
+    margin-top: 10px;
+}
+
+.chapter-text {
+
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(255,255,255,0.65);
+}
+
+
+/* ================= CHAPTER 02 ================= */
+
+.chapter-two-content {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.chapter-two-intro,
+.memory-intro {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color:
+        rgba(255,255,255,0.6);
+
+    margin-bottom: 45px;
+}
+
+.qualities {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    max-width: 950px;
+
+    margin: auto;
+}
+
+.quality-card {
+
+    padding: 28px 24px;
+
+    min-height: 210px;
+
+    text-align: left;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    backdrop-filter:
+        blur(15px);
+
+    transition: 0.35s ease;
+}
+
+.quality-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(180,120,255,0.45);
+
+    background:
+        rgba(255,255,255,0.08);
+}
+
+.card-number {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(255,255,255,0.35);
+
+    margin-bottom: 25px;
+}
+
+.quality-card h3 {
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin-bottom: 14px;
+}
+
+.quality-card p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color:
+        rgba(255,255,255,0.55);
+}
+
+
+/* ================= DAAA BUTTON ================= */
+
+.daaa-box {
+
+    margin:
+        55px auto 0;
+
+    padding: 35px 20px;
+
+    max-width: 600px;
+
+    border-radius: 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    background:
+        rgba(0,0,0,0.15);
+
+    backdrop-filter:
+        blur(15px);
+}
+
+.click-text {
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,0.45);
+
+    margin-bottom: 20px;
+}
+
+#daaaButton {
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.3);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(150,80,255,0.35),
+            rgba(255,60,180,0.25)
+        );
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 0 30px
+        rgba(150,80,255,0.2);
+
+    transition: 0.35s ease;
+}
+
+#daaaButton:hover {
+
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 45px
+        rgba(190,80,255,0.55);
+}
+
+.secret-message {
+
+    min-height: 30px;
+
+    margin-top: 25px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color:
+        rgba(255,255,255,0.75);
+}
+
+
+/* ================= CHAPTER 03 ================= */
+
+.chapter-three-content {
+
+    width: 100%;
+
+    max-width: 1050px;
+}
+
+.friend-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.friend-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 25px;
+
+    text-align: left;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    backdrop-filter:
+        blur(18px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.friend-card:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(-1deg);
+
+    border-color:
+        rgba(170,110,255,0.45);
+}
+
+.avatar {
+
+    min-width: 85px;
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 40px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    box-shadow:
+        inset 0 0 30px
+        rgba(255,255,255,0.05);
+}
+
+.purple-avatar {
+    background:
+        radial-gradient(
+            circle,
+            rgba(150,70,255,0.45),
+            rgba(40,10,80,0.5)
+        );
+}
+
+.blue-avatar {
+    background:
+        radial-gradient(
+            circle,
+            rgba(50,120,255,0.45),
+            rgba(10,30,80,0.5)
+        );
+}
+
+.pink-avatar {
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,60,180,0.45),
+            rgba(80,10,50,0.5)
+        );
+}
+
+.daaa-avatar {
+    background:
+        radial-gradient(
+            circle,
+            rgba(180,90,255,0.55),
+            rgba(30,10,70,0.6)
+        );
+
+    animation:
+        avatarGlow
+        2.5s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+@keyframes avatarGlow {
+
+    from {
+        box-shadow:
+            0 0 15px
+            rgba(160,80,255,0.2);
+    }
+
+    to {
+        box-shadow:
+            0 0 40px
+            rgba(220,80,255,0.55);
+    }
+}
+
+.friend-info small {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(255,255,255,0.35);
+}
+
+.friend-info h3 {
+
+    margin-top: 8px;
+
+    font-size: 21px;
+
+    font-weight: 500;
+}
+
+.friend-info p {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color:
+        rgba(255,255,255,0.55);
+}
+
+
+/* SPECIAL CARD */
+
+.special-card {
+
+    grid-column:
+        span 2;
+
+    max-width: 650px;
+
+    width: 100%;
+
+    margin:
+        15px auto 0;
+
+    border-color:
+        rgba(180,100,255,0.3);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(130,60,255,0.10),
+            rgba(255,60,180,0.06)
+        );
+}
+
+.special-glow {
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: -80px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(150,70,255,0.15);
+
+    filter: blur(30px);
+
+    pointer-events: none;
+}
+
+.memory-ending {
+
+    margin-top: 45px;
+
+    color:
+        rgba(255,255,255,0.55);
+
+    line-height: 1.8;
+}
+
+.memory-ending strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    color: white;
+}
+
+
+/* ================= CHAPTER 04 ================= */
+
+.letter {
+
+    max-width: 850px;
+
+    width: 100%;
+}
+
+.letter-box {
+
+    margin:
+        35px auto 0;
+
+    max-width: 700px;
+
+    padding:
+        35px 40px;
+
+    text-align: left;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.13);
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    backdrop-filter:
+        blur(20px);
+
+    line-height: 1.8;
+
+    color:
+        rgba(255,255,255,0.7);
+}
+
+.letter-box p {
+    margin-bottom: 20px;
+}
+
+.letter-box strong {
+    color: white;
+}
+
+.signature {
+
+    margin-top: 30px;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+
+/* ================= FINAL SCREEN ================= */
+
+.final-content {
+    max-width: 900px;
+}
+
+.final-small {
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color:
+        rgba(255,255,255,0.45);
+}
+
+.countdown {
+
+    margin:
+        35px 0;
+
+    font-size: 80px;
+
+    font-weight: 300;
+
+    color:
+        rgba(255,255,255,0.9);
+}
+
+.final-screen h2 {
+
+    font-size:
+        clamp(45px, 7vw, 90px);
+}
+
+.final-screen h2 span {
+
+    display: block;
+
+    margin-top: 10px;
+}
+
+.final-message {
+
+    margin-top: 30px;
+
+    font-size: 18px;
+
+    color:
+        rgba(255,255,255,0.6);
+}
+
+.heart {
+
+    margin-top: 35px;
+
+    font-size: 45px;
+
+    color:
+        rgba(255,255,255,0.8);
+
+    animation:
+        heartbeat
+        1.5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    .screen {
+        padding: 40px 18px;
+    }
+
+    .qualities {
+        grid-template-columns: 1fr;
+    }
+
+    .friend-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .special-card {
+        grid-column: span 1;
+    }
+
+    .friend-card {
+        padding: 20px;
+    }
+
+    .avatar {
+        min-width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+
+    .friend-info h3 {
+        font-size: 18px;
+    }
+
+    .friend-info p {
+        font-size: 12px;
+    }
+
+    .letter-box {
+        padding: 28px 22px;
+    }
+}
